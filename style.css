@@ -1,0 +1,279 @@
+@charset "UDT-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+#wrap {
+    width: 1000px;
+    margin: auto;
+}
+
+/* header */
+#header {}
+
+#header h1 {
+    float: left;
+    width: 110px;
+    padding: 15px 0 10px;
+}
+
+#header h1 a {}
+
+#header h1 a img {
+    width: 100%;
+}
+
+#header .nav {
+    float: right;
+}
+
+#header .nav ul {}
+
+#header .nav ul li {
+    position: relative;
+    float: left;
+    width: 140px;
+    text-align: center;
+    background-color: #ddd;
+}
+
+#header .nav ul li a {
+    display: block;
+    /* padding: 위px 좌우px 아래px; */
+    padding: 24px 20px 20px;
+    transition: 0.3s;
+}
+
+#header .nav ul li a:hover {
+    background-color: #ccc;
+}
+
+#header .nav ul li ul.submenu{
+    display: none;
+    position: absolute;
+    left: 0; top: 65px;
+    z-index: 10;
+}
+#header .nav ul li ul.submenu li{}
+#header .nav ul li ul.submenu li a{
+    padding: 18px;
+    background-color: #888;
+    color: #dbdbdb;
+}
+#header .nav ul li ul.submenu li a:hover{
+    background-color: #666;
+}
+
+/* banner */
+#banner{
+    overflow: hidden;
+}
+#banner .slideList{
+    width: 3000px;
+    position: relative;
+}
+#banner .slideList .slideImg{
+    width: 1000px;
+    float: left;
+    position: relative;
+}
+#banner .slideList .slideImg h2{
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(0,0,0,0.4);
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 20px;
+}
+#banner .slideList img{
+    width: 100%;
+}
+
+/* content1 */
+#content1{
+    margin-top: 20px;
+}
+#content1 .title{
+    font-size: 22px;
+    padding-bottom: 5px;
+}
+#content1 .desc{
+   font-size: 14px;
+   color: #666;
+   padding-bottom: 15px;
+}
+
+#content1 .left{
+    float: left;
+    width: 49%;
+    /* background-color: #f2f2f2;
+    background-image: url(images/bg1.jpg);
+    background-repeat: no-repeat; /* -->이미지 반복x */
+    /* background-position: right 20px center;
+    background-size: 80px; */ 
+
+    /* background: color image repeat(반복) position/size; --> 한줄에 다 적을때(압축)*/
+    background: #f2f2f2 url(images/bg1.jpg)no-repeat right 20px center/80px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+#content1 .left .btn{
+    background: url(images/icon1.jpg)no-repeat left top;
+    background-size: 20px;
+    padding-left: 25px;
+}
+
+#content1 .right{
+    float: right;
+    width: 49%;
+    background: #f2f2f2 url(images/bg2.jpg)no-repeat right 20px center;
+    background-size: 80px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+#content1 .right .btn{
+    background: url(images/icon2.jpg)no-repeat left top;
+    background-size: 20px;
+    padding-left: 25px;
+}
+#content1 .right .btn em{
+    font-style: normal;
+    font-size: 13px;
+    color: #999;
+}
+
+/* content2 */
+#content2{
+    margin-top: 30px;
+}
+.tab_menu{}
+.tab_menu .tab_btn{}
+.tab_menu .tab_btn ul{}
+.tab_menu .tab_btn ul li{
+    float: left;
+    margin-right: 15px;
+}
+.tab_menu .tab_btn ul li a{
+    display: block;
+    padding: 10px;
+    font-size: 24px;
+    color: #999;
+}
+.tab_menu .tab_btn ul li.active a{
+    color: #000;
+}
+
+.tab_menu .tab_cont{}
+.tab_menu .tab_cont .best{}
+.tab_menu .tab_cont div figure{
+    float: left;
+    width: 32%;
+    margin-right: 2%;
+}
+.tab_menu .tab_cont div figure:last-child{
+    margin-right: 0;
+}
+.tab_menu .tab_cont div figure img{
+    width: 100%;
+}
+.tab_menu .tab_cont div figure figcaption{}
+
+/* footer */
+#footer{
+    background-color: #202020;
+    margin-top: 30px;
+    padding: 20px;
+}
+#footer h2{
+    width: 150px;
+    float: left;
+}
+#footer h2 img{
+    width: 100%;
+}
+.foot{
+    float: right;
+}
+.foot ul{
+    padding-bottom: 10px;
+}
+.foot ul li{
+    display: inline;
+}
+.foot ul li a{
+    color: #fff;
+    padding-right: 10px;
+}
+.foot address{
+    color: #ccc;
+    font-style: normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 팝업 */
+
+.layer-bg{
+    display: none;
+    position: fixed; /* --> 스크롤을 내려도 화면에 계속 붙어있음 */
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.8);
+}
+.layer{
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%,-50%);
+    width: 500px; height: 500px;
+    background-color: #fff;
+    padding: 20px;
+}
+.layer h2{}
+.layer .close{
+    position: absolute;
+    right: 20px ; bottom: 20px;
+}
+
+.layer .video{
+    width: 400px;
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%,-50%);
+}
+.video video{
+    width: 100%;
+}
